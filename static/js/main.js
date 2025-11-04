@@ -106,4 +106,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Copy to clipboard functionality for command outputs
- 
+     const copyButtons = document.querySelectorAll('.copy-output');
+    if (copyButtons.length > 0) {
+        copyButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const textToCopy = this.getAttribute('data-output');
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    // Show success tooltip
+                    const originalTitle = this.getAttribute('title');
+                    this.setAttribute('title', 'Copied!');
+                    bootstrap.Tooltip.getInstance(this).show();
+                    
+                    // Reset after 2 seconds
+                    setTimeout(() => {
+                        this.setAttribute('title', originalTitle);
+                        bootstrap.Tooltip.getInstance(this).hide();
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy: ', err);
+                });
+            });
+        });
+    }
+});
