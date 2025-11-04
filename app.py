@@ -65,7 +65,7 @@ with app.app_context():
             )
             # Add some default command permissions for admin
             perm1 = CommandPermission(command_pattern='ls *', description='List files')
-           
+            perm2 = CommandPermission(command_pattern='ps aux', description='List processes')
             perm3 = CommandPermission(command_pattern='free -m', description='Show memory usage')
             perm4 = CommandPermission(command_pattern='df -h', description='Disk space usage')
             
