@@ -60,12 +60,13 @@ System-Call-Monitoring-Dashboard/
 - **Secure System Calls**: System calls are securely handled in [`system_calls.py`](system_calls.py).
 - **HTML Templates**: Predefined templates for the user interface are located in the `templates/` directory.
 - **Static Assets**: CSS and JavaScript files are stored in the `static/` directory.
+```
 
 ## Installation
 
 1. Clone the repository:
    ```bash
-   git clone <https://github.com/Adityayadav7567/secure-system-call.git>
+   git clone https://github.com/Adityayadav7567/secure-system-call.git
    cd secure-syscall-interface
    ```
 
