@@ -10,7 +10,7 @@
             <div class="card-body">
                 <h5>Welcome, {{ current_user.username }}!</h5>
                 <p>
-                    This dashboard provides an overview of your system call activities and permissions.
+                    This dashboard shows your system call history and the permissions linked to your account.
                     {% if current_user.is_admin %}
                     As an administrator, you have full access to all system commands and user management.
                     {% else %}
