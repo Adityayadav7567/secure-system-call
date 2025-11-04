@@ -65,7 +65,7 @@ System-Call-Monitoring-Dashboard/
 
 1. Clone the repository:
    ```bash
-   git clone <https://github.com/katariarjunvarma/Secure-Call.git>
+   git clone <https://github.com/Adityayadav7567/secure-system-call.git>
    cd secure-syscall-interface
    ```
 
