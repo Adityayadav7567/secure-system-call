@@ -2,27 +2,55 @@
 
 Secure-Call is a Python-based project designed to provide a secure interface for system calls. It includes features for authentication, logging, and form handling, and is built with modularity and extensibility in mind.
 
-## Project Structure
+## 📂 Project Folder Structure
 
-```
-.replit               # Configuration for Replit environment
-app.py                # Main application logic
-auth.py               # Authentication-related functionality
-forms.py              # Form handling logic
-logger.py             # Logging utilities
-main.py               # Entry point of the application
-models.py             # Data models and database interactions
-system_calls.py       # Secure system call implementations
-pyproject.toml        # Project configuration and dependencies
-README.md             # Project documentation
-replit.nix            # Nix configuration for Replit
-static/               # Static assets (CSS, JavaScript, etc.)
-templates/            # HTML templates for the application
-instance/             # Instance-specific files (e.g., database)
-__pycache__/          # Compiled Python files
-.pythonlibs/          # Virtual environment libraries
-.upm/                 # Package manager metadata
-```
+```text
+System-Call-Monitoring-Dashboard/
+│
+├── app/
+│   ├── __init__.py                # Initializes Flask app, database, and blueprints
+│   ├── models.py                  # Database models (SystemCallLog, User, etc.)
+│   ├── forms.py                   # Flask-WTF forms for login/register (if any)
+│   │
+│   ├── routes/
+│   │   ├── __init__.py
+│   │   ├── auth.py                # Handles user authentication and profile routes
+│   │   ├── system_calls.py        # Handles system call logs, APIs, and chart data
+│   │   ├── dashboard.py           # Dashboard display logic
+│   │
+│   ├── static/
+│   │   ├── css/
+│   │   │   └── style.css          # Custom CSS overrides for Bootstrap
+│   │   ├── js/
+│   │   │   ├── chart.js           # Chart utilities and reusable functions
+│   │   │   └── main.js            # Custom frontend scripts
+│   │   ├── img/
+│   │   │   └── logo.png           # Project or institute logo (optional)
+│   │
+│   ├── templates/
+│   │   ├── layout.html            # Base layout template (Bootstrap + Navbar)
+│   │   ├── dashboard.html         # Dashboard page with activity charts
+│   │   ├── login.html             # Login form page
+│   │   ├── register.html          # Signup page (optional)
+│   │   ├── logs.html              # System logs and history view
+│   │   └── error.html             # Error handling templates (404, 500, etc.)
+│
+├── instance/
+│   └── database.db                # SQLite database file (auto-created)
+│
+├── migrations/                    # Alembic migrations (if using Flask-Migrate)
+│
+├── tests/
+│   ├── test_routes.py             # Unit tests for routes
+│   ├── test_models.py             # Unit tests for models
+│
+├── .gitignore                     # Files and folders ignored by Git
+├── requirements.txt               # List of Python dependencies
+├── config.py                      # Configuration file (DB URI, secret keys)
+├── run.py                         # Entry point to start the Flask app
+├── README.md                      # Project documentation
+└── LICENSE                        # (Optional) License file if public
+
 
 ## Features
 
@@ -62,10 +90,6 @@ __pycache__/          # Compiled Python files
 - Access the application via the provided URL after running `main.py`.
 - Use the dashboard to execute secure system calls and manage forms.
 
-## Contributing
+ 
 
-Contributions are welcome! Please fork the repository and submit a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+ 
